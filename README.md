@@ -12,7 +12,7 @@ This project represents a **static e-commerce interface** for a sneakers store. 
 
 
 ## 🔗 Live Demo
-👉 https://mubin25s.github.io/Sneakers/
+👉https://proportional-duck.github.io/Sneakers-/
 
 ## 💡 Features
 
