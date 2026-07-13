@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoeZone | Premium Footwear Collective</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="logo">
+                SHOE<span class="text-primary">ZONE</span>
+            </a>
+            
+            <div class="nav-actions flex gap-6 items-center">
+                <nav class="flex gap-6 items-center hidden md-flex" style="margin-right: 1rem; border-right: 1px solid var(--glass-border); padding-right: 2rem;">
+                    <a href="shop.html" class="auth-nav-link" style="background: transparent; border: none; padding: 0;">SHOP</a>
+                    <a href="about.html" class="auth-nav-link" style="background: transparent; border: none; padding: 0;">ABOUT</a>
+                </nav>
+                
+                <a href="login.html" id="auth-link">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    Login
+                </a>
+                <a href="cart.html" class="cart-icon">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                    </svg>
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section" id="hero-section" style="padding-top: 160px; padding-bottom: 80px; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: -10%; left: 50%; width: 40%; height: 60%; background: radial-gradient(circle, var(--color-primary-glow) 0%, transparent 70%); filter: blur(100px); pointer-events: none;"></div>
+        
+        <div id="hero-default" class="container animate-fade-in">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <span class="text-primary uppercase letter-spacing font-bold" style="font-size: 0.8rem; margin-bottom: 1rem; display: block;">NEW COLLECTION 2024</span>
+                <h1 class="hero-title" style="font-size: 4.5rem; line-height: 1.1; margin-bottom: 1.5rem; font-weight: 800;">
+                    STEP INTO THE <br><span class="text-primary">ELITE CHOICE.</span>
+                </h1>
+                <p class="text-muted" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 3rem;">
+                    Engineered for performance, styled for the street. Experience the pinnacle of sneaker technology with our Bluish-Black collection.
+                </p>
+                
+                <div class="flex justify-center gap-4">
+                    <a href="shop.html" class="btn btn-primary">SHOP COLLECTION</a>
+                    <a href="about.html" class="btn btn-outline">EXPLORE OUR TECH</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="hero-quick-view" class="container hidden" style="padding: 2rem 0;">
+            <!-- Content will be populated via JS -->
+        </div>
+    </section>
+
+    <section class="container" style="margin-bottom: 80px;">
+        <div class="flex justify-between items-end" style="margin-bottom: 2rem;">
+            <div>
+                <h2 style="font-size: 2rem; font-weight: 800;">Explore <span class="text-primary">Sectors</span></h2>
+                <p class="text-muted">Tailored for every movement.</p>
+            </div>
+        </div>
+        <div id="sector-grid" class="grid grid-cols-3 gap-4">
+             <div class="glass-card text-center" style="height: 300px; display: flex; align-items: center; justify-content: center;">
+                 <p class="text-muted">Loading sectors...</p>
+             </div>
+        </div>
+    </section>
+
+    <section class="container" style="margin-bottom: 100px;">
+        <div class="flex justify-between items-end" style="margin-bottom: 2rem;">
+            <div>
+                <h2 style="font-size: 2rem; font-weight: 800;">Trending <span class="text-primary">Drops</span></h2>
+                <p class="text-muted">Be the first to secure the latest arrivals.</p>
+            </div>
+            <a href="shop.html" class="text-primary hover:underline font-bold">View All Shop</a>
+        </div>
+        
+        <div id="featured-grid" class="grid grid-cols-4 gap-6">
+            <p class="text-muted" style="grid-column: 1/-1; text-align: center;">Loading drops...</p>
+        </div>
+    </section>
+
+    <section class="container" style="margin-bottom: 100px;">
+        <div class="flex justify-between items-end" style="margin-bottom: 2rem;">
+            <div>
+                <h2 style="font-size: 2rem; font-weight: 800;">Ladies Elite <span class="text-primary">Collection</span></h2>
+                <p class="text-muted">Sophisticated silhouettes for the modern woman.</p>
+            </div>
+            <a href="shop.html?category=women" class="text-primary hover:underline font-bold">Explore All Ladies</a>
+        </div>
+        <div id="ladies-grid" class="grid grid-cols-4 gap-6">
+            <p class="text-muted" style="grid-column: 1/-1; text-align: center;">Loading ladies collection...</p>
+        </div>
+    </section>
+
+    <section class="container" style="margin-bottom: 100px;">
+        <div class="flex justify-between items-end" style="margin-bottom: 2rem;">
+            <div>
+                <h2 style="font-size: 2rem; font-weight: 800;">Junior Explorers <span class="text-primary">Collection</span></h2>
+                <p class="text-muted">Durable and fun styles for every small adventure.</p>
+            </div>
+            <a href="shop.html?category=kids" class="text-primary hover:underline font-bold">Explore All Kids</a>
+        </div>
+        <div id="kids-grid" class="grid grid-cols-4 gap-6">
+            <p class="text-muted" style="grid-column: 1/-1; text-align: center;">Loading kids collection...</p>
+        </div>
+    </section>
+
+    <section class="container" style="margin-bottom: 80px;">
+        <div class="glass-card" style="padding: 4rem; text-align: center; background: radial-gradient(circle at top right, rgba(239, 68, 68, 0.05), transparent);">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Keep Up With The <span class="text-primary">Drop.</span></h2>
+            <p class="text-muted" style="margin-bottom: 2rem;">Join our newsletter for exclusive access to limited edition releases.</p>
+            <form id="newsletter-form" class="flex justify-center gap-2" style="max-width: 500px; margin: 0 auto;">
+                <input type="email" placeholder="Your email address" style="flex: 1; padding: 1rem; border-radius: var(--radius-md); background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); color: white;" required>
+                <button type="submit" class="btn btn-primary">JOIN NOW</button>
+            </form>
+        </div>
+    </section>
+
+    <footer style="background: #000; padding: 60px 0 30px; border-top: 1px solid var(--glass-border);">
+        <div class="container grid grid-cols-3 gap-8">
+            <div>
+                <h3 class="logo" style="margin-bottom: 1.5rem;">SHOE<span class="text-primary">ZONE</span></h3>
+                <p class="text-muted" style="font-size: 0.9rem;">The ultimate destination for sneakerheads and performance enthusiasts alike.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; font-weight: 700;">NAVIGATION</h4>
+                <div class="flex flex-col gap-2 text-muted" style="font-size: 0.9rem;">
+                    <a href="shop.html" class="hover:text-primary">Shop Sneakers</a>
+                    <a href="about.html" class="hover:text-primary">Our Story</a>
+                    <a href="cart.html" class="hover:text-primary">My Cart</a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; font-weight: 700;">SUPPORT</h4>
+                <div class="flex flex-col gap-2 text-muted" style="font-size: 0.9rem;">
+                    <a href="#" class="hover:text-primary">Track Order</a>
+                    <a href="#" class="hover:text-primary">Returns</a>
+                    <a href="#" class="hover:text-primary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; font-size: 0.8rem; color: #444;">
+            &copy; 2024 SHOE ZONE COLLECTIVE. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+
+    <script type="module" src="assets/js/ui-service.js"></script>
+    <script type="module" src="assets/js/header-auth.js"></script>
+    <script type="module" src="assets/js/cart-service.js"></script>
+    <script type="module">
+        import { fetchProducts, fetchCategories } from './assets/js/api-service.js';
+        import ui from './assets/js/ui-service.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+             const newsForm = document.getElementById('newsletter-form');
+             if(newsForm) {
+                 newsForm.onsubmit = (e) => {
+                     e.preventDefault();
+                     ui.showToast('Successfully joined the newsletter!', 'success');
+                     newsForm.reset();
+                 };
+             }
+
+            fetchCategories().then(cats => {
+                const grid = document.getElementById('sector-grid');
+                if(cats.length > 0) {
+                    grid.innerHTML = cats.slice(0, 3).map(c => `
+                        <a href="shop.html?category=${c.id}" class="glass-card" style="background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)), url('${c.image}'); background-size: cover; background-position: center; height: 300px; display: flex; align-items: flex-end; padding: 2rem;">
+                            <h3 style="font-size: 1.5rem; font-weight: 800; color: white;">${c.name}</h3>
+                        </a>
+                    `).join('');
+                }
+            });
+
+            function productCardTemplate(p) {
+                return `
+                    <div class="product-card">
+                        <div class="product-image-container" onclick="window.openBuySection(${p.id})">
+                            <img src="${p.image}" alt="${p.name}" style="cursor: pointer;">
+                            <div class="quick-add" onclick="event.stopPropagation(); window.quickViewModal(${p.id})">QUICK VIEW</div>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <div class="text-muted" style="font-size: 0.75rem; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.05em;">${p.brand}</div>
+                            <h3 style="font-size: 1.1rem; margin-bottom: 0.8rem; font-weight: 700;">
+                                <a href="javascript:void(0)" onclick="window.openBuySection(${p.id})">${p.name}</a>
+                            </h3>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-bold" style="font-size: 1.2rem;">$${p.price}</span>
+                                <button onclick="window.addToCart(${p.id})" class="btn btn-primary" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">QUICK ADD +</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            fetchProducts().then(products => {
+                const grid = document.getElementById('featured-grid');
+                const ladiesGrid = document.getElementById('ladies-grid');
+                const kidsGrid = document.getElementById('kids-grid');
+                
+                window.allProducts = products; // Store for global access
+                
+                const featured = products.slice(0, 4);
+                if(featured.length > 0) {
+                    grid.innerHTML = featured.map(productCardTemplate).join('');
+                }
+
+                // Populate Ladies Grid
+                const ladies = products.filter(p => p.category === 'women').reverse().slice(0, 4);
+                if(ladiesGrid && ladies.length > 0) {
+                    ladiesGrid.innerHTML = ladies.map(productCardTemplate).join('');
+                }
+
+                // Populate Kids Grid
+                const kids = products.filter(p => p.category === 'kids').reverse().slice(0, 4);
+                if(kidsGrid && kids.length > 0) {
+                    kidsGrid.innerHTML = kids.map(productCardTemplate).join('');
+                }
+            });
+        });
+
+        window.openBuySection = (id) => {
+            const p = window.allProducts.find(item => item.id === id);
+            if (!p) return;
+
+            const defaultHero = document.getElementById('hero-default');
+            const quickViewArea = document.getElementById('hero-quick-view');
+            
+            quickViewArea.innerHTML = `
+                <div class="flex flex-col md-flex-row gap-12 items-center glass-card animate-fade-in" style="padding: 3rem; text-align: left; position: relative; z-index: 10;">
+                    <button onclick="window.closeQuickView()" class="btn-close-qv" style="position: absolute; top: 1.5rem; right: 1.5rem; width: 44px; height: 44px; border-radius: 50%; background: var(--color-surface-light); border: 1px solid var(--glass-border); color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 110; transition: var(--transition);">
+                        <svg style="pointer-events: none;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+                    
+                    <div style="flex: 1; border-radius: var(--radius-lg); overflow: hidden; height: 450px;">
+                        <img src="${p.image}" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    
+                    <div style="flex: 1.2;">
+                        <span class="text-primary font-bold letter-spacing uppercase" style="font-size: 0.8rem;">${p.brand}</span>
+                        <h2 style="font-size: 3rem; font-weight: 800; margin: 0.5rem 0 1rem; line-height: 1.1;">${p.name}</h2>
+                        <div class="text-primary font-bold" style="font-size: 2rem; margin-bottom: 1.5rem;">$${p.price}</div>
+                        <p class="text-muted" style="margin-bottom: 2.5rem; font-size: 1.1rem;">${p.description}</p>
+                        
+                        <div style="margin-bottom: 2.5rem;">
+                            <h4 style="font-size: 0.75rem; font-weight: 800; color: white; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.1em;">SELECT YOUR SIZE (US)</h4>
+                            <div class="flex gap-2 flex-wrap" id="qv-size-container">
+                                ${[7, 8, 9, 10, 11, 12].map(s => `
+                                    <div class="size-chip ${s === 9 ? 'active' : ''}" onclick="window.selectQVSize(this, '${s}')" style="padding: 0.8rem 1.2rem; border: 1px solid var(--glass-border); border-radius: var(--radius-md); cursor: pointer; transition: var(--transition); background: var(--glass-bg); font-weight: 600;">${s}</div>
+                                `).join('')}
+                            </div>
+                        </div>
+                        
+                        <button onclick="window.addToCartWithParams(${p.id})" class="btn btn-primary" style="width: 100%; height: 60px; font-size: 1.1rem; border-radius: 50px;">ADD TO SHOPPING BAG</button>
+                    </div>
+                </div>
+            `;
+
+            defaultHero.classList.add('hidden');
+            quickViewArea.classList.remove('hidden');
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.currentSelectedSize = '9';
+        };
+
+        window.selectQVSize = (el, size) => {
+            document.querySelectorAll('.size-chip').forEach(c => c.classList.remove('active'));
+            el.classList.add('active');
+            window.currentSelectedSize = size;
+        };
+
+        window.closeQuickView = () => {
+            const h = document.getElementById('hero-default');
+            const q = document.getElementById('hero-quick-view');
+            if(h) h.classList.remove('hidden');
+            if(q) q.classList.add('hidden');
+        };
+
+        window.addToCartWithParams = async (id) => {
+            const { authService } = await import('./assets/js/auth-service.js');
+            if (!authService.getUser()) {
+                ui.showToast('Please login to elite collective to begin your collection.', 'error');
+                setTimeout(() => window.location.href = 'login.html', 1500);
+                return;
+            }
+
+            const { cartService } = await import('./assets/js/cart-service.js');
+            const p = window.allProducts.find(item => item.id === id);
+            if(p) {
+                cartService.addItem(p, window.currentSelectedSize || '9');
+                ui.showToast(`${p.name} (Size ${window.currentSelectedSize || '9'}) added to cart!`, 'success');
+            }
+        };
+
+        window.quickViewModal = async (id) => {
+            const p = window.allProducts.find(item => item.id === id);
+            const content = `
+                <div class="flex flex-col md-flex-row gap-8">
+                    <div style="flex: 1; border-radius: var(--radius-md); overflow: hidden; height: 350px;">
+                        <img src="${p.image}" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="flex: 1;">
+                        <span class="text-primary font-bold uppercase" style="font-size: 0.7rem;">${p.brand}</span>
+                        <h2 style="font-size: 2rem; margin: 0.5rem 0 1rem; font-weight: 800;">${p.name}</h2>
+                        <div style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1.5rem;" class="text-primary">$${p.price}</div>
+                        <p class="text-muted" style="margin-bottom: 2rem; font-size: 0.9rem;">${p.description}</p>
+                        <button onclick="window.addToCart(${p.id}); ui.hideModal();" class="btn btn-primary" style="width: 100%;">ADD TO SHOPPING BAG</button>
+                    </div>
+                </div>
+            `;
+            ui.showModal(content, { maxWidth: '850px' });
+        };
+
+        window.addToCart = async (id) => {
+            const { authService } = await import('./assets/js/auth-service.js');
+            if (!authService.getUser()) {
+                ui.showToast('Please login to elite collective to begin your collection.', 'error');
+                setTimeout(() => window.location.href = 'login.html', 1500);
+                return;
+            }
+
+            const { cartService } = await import('./assets/js/cart-service.js');
+            const product = window.allProducts.find(p => p.id === id);
+            if(product) {
+                cartService.addItem(product); // Uses default size 9
+                ui.showToast(`${product.name} added to cart!`, 'success');
+            }
+        };
+    </script>
+</body>
+</html>
